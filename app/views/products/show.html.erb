@@ -1,0 +1,6 @@
+<h1><%= @products.title %></h1>
+<p>Description: <%= @products.description %></p>
+<p>Price: $<%= sprintf('%.2f', (@products.price)) %></p>
+
+<%= link_to 'Edit', edit_product_path(@products) %>
+<%= link_to 'Delete', product_path(@products), method: :delete, data: { confirm: 'Are you sure?' } %>
